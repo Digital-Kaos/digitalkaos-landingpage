@@ -31,7 +31,7 @@ async function getUsers(members){
     const AllRepos = responses.reduce((acc,curr)=>{
         if( !curr.length ) return acc
         const newArr = curr.slice(0,5)
-        return [,...newArr]
+        return [...acc,...newArr]
     },[])
 
     if(!AllRepos.length) return
