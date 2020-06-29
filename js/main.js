@@ -2,6 +2,11 @@ const MEMBERS = ["MaurickThom","ErickHR",'edsonJordan','DavilaManuel','rattboy25
 const URL = "https://api.github.com/users/"
 const carousel = document.getElementById('carousel')
 
+const fila = document.querySelector('.carousel-container');
+const flechaIzquierda = document.getElementById('button-prev');
+const flechaDerecha = document.getElementById('button-next');
+
+
 
 async function ajax({uri,method,body}){
     const headers = new Headers();
@@ -22,12 +27,14 @@ async function getUsers(members){
         ))
     });
     const responses = await Promise.all(users)
-    console.log(responses);
+    
     const AllRepos = responses.reduce((acc,curr)=>{
         if( !curr.length ) return acc
         const newArr = curr.slice(0,5)
-        return [...acc,...newArr]
+        return [,...newArr]
     },[])
+
+    if(!AllRepos.length) return
     
     const template = AllRepos.reduce((acc,curr)=>{
         return `${acc}<article class="card"></article>`
@@ -38,5 +45,9 @@ async function getUsers(members){
 }
 
 getUsers(MEMBERS)
-
-
+flechaDerecha.addEventListener('click', () => {
+    fila.scrollLeft += fila.offsetWidth;
+});
+flechaIzquierda.addEventListener('click', () => {
+    fila.scrollLeft -= fila.offsetWidth;
+});
