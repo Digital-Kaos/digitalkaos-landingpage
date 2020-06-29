@@ -10,22 +10,22 @@ html, body, .parallax {
     background-size: cover;
 }
 
-#parallax-img-one{
+.parallax-img-one{
     background-image: url("../assets/images/amigos-de-paseo.jpg");
 }
 
-#parallax-text{
+.parallax-text{
     background: black;
     padding: 100px 0;
     color: white;
 }
 
-#parallax-text p{
+.parallax-text p{
     max-width: 450px;
     margin: 0 auto;
     text-align: center;
 }
 
-#parallax-img-two{
+.parallax-img-two{
     background-image: url("../assets/images/gente-trabajando-y-compartiendo.jpg");
 }
