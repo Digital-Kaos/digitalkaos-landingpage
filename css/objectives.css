@@ -1,0 +1,90 @@
+/* Divs */
+.container-objetives{    
+      background-color: #9D6BB5;     
+}
+.container-content-objetives{
+    width: 90%;
+    margin: auto;  
+    min-height: 500px;
+   }
+.container-content-objectives-cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));              
+    grid-column-gap: 80px;       
+}
+.container-content-objectives-cards-article{
+    position: relative;        
+    min-width: 400px;
+    height: min-content;
+    background-color: white;        
+}
+.container-content-objectives-cards-article:nth-child(2){       
+    margin-top: 80px;
+}
+.container-content-objectives-cards-article:nth-child(3){       
+    margin-top: 160px;
+}
+ .container-content-objectives-cards-article:not(:last-child):after{   
+    display: block;
+    content: " ";
+    position: absolute;    
+    top: 70%;
+    right: -100px;
+    width: 100px;
+    height: 15px;
+    background-color: black;
+}
+.container-content-objectives-cards-article:nth-child(n):before{
+    content: '  ';
+    display: block;
+    position: absolute;
+    top: -60px;
+    left: 65px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #C4C4C4;
+    background-size: 55%;   
+}
+.container-content-objectives-cards-article:nth-child(1):before{
+    display: block;    
+    background-image: url('../assets/svg/share.svg') ;  
+    background-repeat: no-repeat; 
+    background-position: center;    
+}
+.container-content-objectives-cards-article:nth-child(2):before{
+    display: block;    
+    background-image: url('../assets/svg/build.svg') ;  
+    background-repeat: no-repeat; 
+    background-position: center;    
+}
+.container-content-objectives-cards-article:nth-child(3):before{
+    display: block;    
+    background-image: url('../assets/svg/funny.svg') ;  
+    background-repeat: no-repeat; 
+    background-position: center;    
+}
+.container-content-objectives-cards-article-content{
+    width: 75%;     
+    margin: 75px auto;         
+}
+/* textos */
+.container-objetives > h1{    
+    text-align: center;
+    color: white;    
+    padding: 20px 0;
+    font-size: 3em;    
+}
+.container-content-objectives-cards-article-content > p {
+    font-weight: bold;
+    font-size: 1.5em;    
+}
+.container-content-objectives-cards-article-content > span {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #5d6678;
+}
+/* Eventos hover */
+.container-content-objectives-cards-article:hover{
+    
+}
