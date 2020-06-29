@@ -8,6 +8,7 @@
 
 @import url("header.css");
 @import url("objectives.css");
+@import url("portfolio.css");
 @import url("parallax.css");
 html, body{
     margin-left: 0;    
